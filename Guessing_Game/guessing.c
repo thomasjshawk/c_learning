@@ -1,11 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+#include <stddef.h>
 
 int player_guess();
 
 int main(){
+	srand(time(NULL));
 	char name[15];
-	int ran = rand() % (10 - 2) +1;
+	int ran = (rand() % (10 + 1 - 1)) +1;
 	int guess;
 	int num_guesses = 0;
 
